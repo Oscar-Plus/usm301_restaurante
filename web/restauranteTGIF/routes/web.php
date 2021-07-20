@@ -13,6 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view("/","agregar_proveedor")->name("agregar_proveedor");
+Route::view("/ver_proveedor","ver_proveedor")->name("ver_proveedor");
+
+Route::view("/agregar_materiaprima","agregar_materiaprima")->name("agregar_materiaprima");
+Route::view("/ver_materiaprima","ver_materiaprima")->name("ver_materiaprima");
+
+Route::view("/realizar_venta","realizar_venta")->name("realizar_venta");
+Route::view("/ver_venta","ver_venta")->name("ver_venta");
