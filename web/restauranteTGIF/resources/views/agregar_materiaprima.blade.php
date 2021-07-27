@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('contenido')
-    <h1>agregar materia prima</h1>
+    <h1>soy materia p</h1>
+
     
 @endsection
