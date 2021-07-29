@@ -11,6 +11,7 @@
                             <th>Nombre</th>
                             <th>Telefono</th>
                             <th>Correo Electronico</th>
+                            <th>Ubicacion</th>
                             <th>Acciones</th>
 
                         </tr>
@@ -25,4 +26,9 @@
 
         </div>
     
+@endsection
+
+@section('javascript')
+        <script src ="{{asset('js/servicios/proveedoresService.js')}}"></script>
+        <script src="{{asset('js/ver_proveedor.js')}}"></script>
 @endsection

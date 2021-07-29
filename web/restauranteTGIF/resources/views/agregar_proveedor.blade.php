@@ -7,7 +7,7 @@
         
         <div class="card">
 
-          <div class="card-header bg-success text-warning">
+          <div class="card-header bg-success text-warning bg-gradient">
             <span>Agregar Proveedor</span>
             
           </div>
@@ -37,10 +37,15 @@
 
             </div>
 
+            <div class="mb-3">
+              <label for="ubicacion-txt" class="form-label">Ubicacion</label>
+              <input type="text" id="ubicacion-txt" placeholder ="Ingrese su ubicaciom" class="form-control">
+            </div>
+
           </div>
 
           <div class="card-footer d-grid gap-1">
-            <button class="btn btn-info">Registrar</button>
+            <button id="registrar-btn" class="btn btn-info">Registrar</button>
 
           </div>
 
@@ -50,4 +55,9 @@
 
   </div>
       
+@endsection
+
+@section('javascript')
+  <script src="{{asset('js/servicios/proveedoresService.js')}}"></script>
+  <script src="{{asset('js/agregar_proveedor.js')}}"></script>
 @endsection
