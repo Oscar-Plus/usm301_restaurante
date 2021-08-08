@@ -20,6 +20,7 @@ class CrearTablaProveedores extends Migration
             $table->string("telefono",20);
             $table->string("correo",50);
             $table->string("ubicacion",50);
+            $table->integer("cod_empresa");
 
 
             $table->timestamps();

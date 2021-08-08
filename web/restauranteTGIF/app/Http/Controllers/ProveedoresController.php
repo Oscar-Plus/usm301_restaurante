@@ -24,6 +24,7 @@ class ProveedoresController extends Controller
         $proveedor->telefono = $input["telefono"];
         $proveedor->correo = $input["correo"];
         $proveedor->ubicacion = $input["ubicacion"];
+        $proveedor->cod_empresa = $input["cod_empresa"];
 
         $proveedor->save();
         return $proveedor;
@@ -43,6 +44,25 @@ class ProveedoresController extends Controller
 
 
     }
+
+    public function actualizarProveedor(Request $request){
+        $input  = $request->all();
+        $id = $input["id"];
+    
+        $proveedor = Proveedor::findOrFail($id);
+        $proveedor->rut = $input["rut"];
+        $proveedor->nombre = $input["nombre"];
+        $proveedor->telefono = $input["telefono"];
+        $proveedor->correo = $input["correo"];
+        $proveedor->ubicacion = $input["ubicacion"];
+        $proveedor->cod_empresa = $input["cod_empresa"];
+
+        $proveedor->save();
+        return $proveedor;
+
+    }
+
+    
 
 }
  

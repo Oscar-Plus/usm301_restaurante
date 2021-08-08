@@ -37,3 +37,20 @@ const eliminarProveedor = async(id)=>{
 
 
 }
+
+//actualizarProveedor
+const actualizarProveedor = async (proveedor)=>{
+    try{
+        let resp = await axios.post("api/proveedores/actualizar" , proveedor,{
+            headers: {
+                     "Content-Type" : "application/json"
+            }
+        });
+        return resp.data == "ok";
+
+
+    }catch(e){
+        return false;
+    }
+
+}

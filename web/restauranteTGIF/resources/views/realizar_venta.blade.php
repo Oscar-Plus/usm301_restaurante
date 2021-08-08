@@ -4,7 +4,7 @@
     <div class="row mt-5">
         <div class="col-12 col-md-6 col-lg-5 mx-auto">
             <div class="card">
-                <div class="card-header bg-success bg-gradient">
+                <div class="card-header bg-success bg-gradient text-warning">
                     <span>Registrar Venta</span>
                 </div>
 
@@ -23,7 +23,7 @@
 
                     <div class="mb-3">
                         <label for="precio-txt" class="form-label">Precio</label>
-                        <input type="number" id="precio-txt" placeholder = "Ingrese el precio del producto" class="form-control">
+                        <input type="number" id="precio-txt" min = 0 value="0" class="form-control">
                     </div>
 
                     <div class="mb-3">
@@ -37,7 +37,7 @@
 
 
                 <div class="card-footer d-grid gap-1">
-                    <button class="btn btn-info" >Registrar</button>
+                    <button id="registrarVenta-btn" class="btn btn-info" >Registrar</button>
                 </div>
 
             </div>
@@ -49,6 +49,8 @@
 @endsection
 
 @section('javascript')
+    <script src="{{asset('js/servicios/tiposService.js')}}"></script>
+    <script src="{{asset("js/servicios/ventasService.js")}}"></script>
     <script src="{{asset('js/realizar_venta.js')}}"></script>
     
 @endsection

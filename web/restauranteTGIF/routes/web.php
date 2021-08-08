@@ -21,3 +21,6 @@ Route::view("/ver_materiaprima","ver_materiaprima")->name("ver_materiaprima");
 
 Route::view("/realizar_venta","realizar_venta")->name("realizar_venta");
 Route::view("/ver_venta","ver_venta")->name("ver_venta");
+
+Route::view("/ingresar_personalCaja","ingresar_personalCaja")->name("ingresar_personalCaja");
+Route::view("/ver_personalCaja","ver_personalCaja")->name("ver_personalCaja");
