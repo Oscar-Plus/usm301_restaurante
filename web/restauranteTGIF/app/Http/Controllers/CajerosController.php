@@ -39,6 +39,22 @@ class CajerosController extends Controller
 
     }
 
+    public function actualizarCajero(Request $requet){
+        $input = $request->all();
+        $id    = $input["id"];
+
+        $cajero = Cajero::findOrFail($id);
+        $cajero->cod_cajero = $input["cod_cajero"];
+        $cajero->nom_cajero = $input["nom_cajero"];
+        $cajero->fono_cajero = $input["fono_cajero"];
+        $cajero->correo_cajero = $input["correo_cajero"];
+
+        $cajero->save();
+        return $cajero;
+
+
+    }
+
 
 
 }

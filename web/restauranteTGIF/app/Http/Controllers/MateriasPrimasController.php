@@ -40,5 +40,22 @@ class MateriasPrimasController extends Controller
 
     }
 
+    public function actualizarMateriaP(Request $request){
+        $input = $request->all();
+
+        $id = $input["id"];
+
+        $materiap = MateriaPrima::findOrFail($id);
+        $materiap->cod_materiaP = $input["cod_materiaP"];
+        $materiap->nom_materiaP = $input["nom_materiaP"];
+        $materiap->cant_materiaP = $input["cant_materiaP"];
+        $materiap->val_materiaP = $input["val_materiaP"];
+        $materiap->fecha_materiaP = $input["fecha_materiaP"];
+
+        $materiap->save();
+
+        return $materiap;
+
+    }
 
 }

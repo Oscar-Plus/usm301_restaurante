@@ -39,9 +39,11 @@ Route::get("tipos/get",[VentasController::class,"getTipos"]);
 Route::get("ventas/get",[VentasController::class , "getVentas"]);
 Route::get("ventas/filtrar",[VentasController::class, "filtrarVentas"]);
 
+
 //post
 Route::post("ventas/post",[VentasController::class , "crearVenta"]);
 Route::post("ventas/delete",[VentasController::class , "eliminarVenta"]);
+Route::post("ventas/actualizar",[VentasController::class, "actualizarVenta"]);
 
 //Rutas del controller MateriasPrimas
 
@@ -51,6 +53,8 @@ Route::get("materiasp/get" ,[MateriasPrimasController::class , "getMateriaP"]);
 //post
 Route::post("materiasp/post" ,[MateriasPrimasController::class , "crearMateriaP"]);
 Route::post("materiasp/delete",[MateriasPrimasController::class , "eliminarMateriaP"]);
+Route::post("materiasp/actualizar",[MateriasPrimasController::class , "eliminarMateriaP"]);
+
 //Ruta del controller Cajeros
 
 //get
@@ -60,3 +64,4 @@ Route::get("cajeros/get" , [CajerosController::class , "getCajeros"]);
 //post
 Route::post("cajeros/post",[CajerosController::class, "crearCajero"]);
 Route::post("cajeros/delete",[CajerosController::class,"eliminarCajero"]);
+Route::post("cajeros/actualizar",[CajerosController::class,"actualizarCajero"]);

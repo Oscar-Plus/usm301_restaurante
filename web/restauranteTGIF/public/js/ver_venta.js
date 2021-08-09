@@ -28,8 +28,9 @@ const Tipos = async()=>{
 };
 
 document.addEventListener("DOMContentLoaded", ()=>{
-    cargarTipos();
     Tipos();
+    cargarTipos();
+    
 });
 
 const iniciarActualizacionV = function(){
